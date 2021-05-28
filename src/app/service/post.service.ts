@@ -8,15 +8,12 @@ import {Post} from "../modules/post";
   providedIn: 'root'
 })
 export class PostService {
-
   private x: number = 0;
   private url = ''
 
-  constructor(private httpPost: HttpClient) {
-  }
+  constructor(private httpPost: HttpClient) { }
 
   getPost(): Observable<Post[]> {
-
     this.x++;
     this.url = 'https://jsonplaceholder.typicode.com/posts?userId=' + this.x
     return this.httpPost.get<Post[]>(this.url)

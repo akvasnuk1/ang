@@ -8,13 +8,11 @@ import {Post} from "../../modules/post";
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  posts: Post[] = []
+  posts: Post[]
 
-  constructor(private postService: PostService) {
-  }
+  constructor(private postService: PostService) { }
 
   ngOnInit(): void {
     this.postService.getPost().subscribe(value => this.posts = value)
   }
-
 }
