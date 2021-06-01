@@ -10,8 +10,7 @@ import {HttpClient} from "@angular/common/http";
 export class UsersResolveService implements Resolve<Observable<User[]>> {
   private url = 'https://jsonplaceholder.typicode.com/users'
 
-  constructor(private httpClient: HttpClient) {
-  }
+  constructor(private httpClient: HttpClient) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Observable<User[]>> | Promise<Observable<User[]>> | Observable<User[]> {
     return this.httpClient.get<User[]>(this.url)
