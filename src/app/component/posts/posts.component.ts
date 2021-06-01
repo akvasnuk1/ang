@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {PostService} from "../../service/post.service";
 import {Post} from "../../modules/post";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-posts',
@@ -8,13 +8,13 @@ import {Post} from "../../modules/post";
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  posts: Post[] = []
+  posts: Post[]
 
-  constructor(private postService: PostService) {
+  constructor(private activateRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.postService.getPost().subscribe(value => this.posts = value)
+    this.activateRoute.data.subscribe(value => this.posts = value.data)
   }
 
 }
