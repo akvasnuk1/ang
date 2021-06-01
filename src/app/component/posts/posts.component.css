@@ -1,0 +1,14 @@
+div {
+  display: flex;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  width: 500px;
+}
