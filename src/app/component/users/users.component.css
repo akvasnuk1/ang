@@ -1,9 +1,0 @@
-div {
-  display: flex;
-  justify-content: center;
-}
-
-.center {
-  position: absolute;
-  left: 0;
-}
