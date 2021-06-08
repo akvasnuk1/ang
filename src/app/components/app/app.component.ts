@@ -20,10 +20,8 @@ export class AppComponent {
   ngOnInit(): void {
     this.usersService.getUsers().subscribe(value => {
       this.users = value;
-      this.username = this.dataTransfer.store.getValue();
     });
-
-
+    this.username = this.dataTransfer.store.getValue();
   }
 
   catchUser(value: User) {
