@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import {User} from "../../interface/user";
+import {User} from "../../interface/user";                        // TODO  додай index файл в папку interface також
 import {DataTransferService, UsersService} from "../../services";
 
 
@@ -9,7 +9,7 @@ import {DataTransferService, UsersService} from "../../services";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {                    // TODO  імплементуй OnInit якщо використовуєш ngOnInit в компоненті
   users: User[];
   user: User;
   username: string;
