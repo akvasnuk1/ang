@@ -25,7 +25,7 @@ export class ReactiveDrivenFormComponent {
     })
   }
 
-  refresh(): void  {
+  refresh(): void {
     window.location.reload()
   }
 }
