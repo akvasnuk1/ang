@@ -1,0 +1,16 @@
+<form [formGroup]="myForm" (ngSubmit)="save(myForm)">
+  <label>
+    model
+    <input type="text" [formControlName]="'model'">
+  </label>
+  <label>
+    price
+    <input type="number" [formControlName]="'price'">
+  </label>
+  <label>
+    year
+    <input type="number" [formControlName]="'year'">
+  </label>
+  <button>save</button>
+  <button (click)="refresh()">refresh</button>
+</form>

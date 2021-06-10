@@ -1,16 +1,4 @@
-<div class="main">
-  {{username}}
-</div>
-<div>
-  <app-user *ngFor="let user of users" [user]="user" (lifter)="catchUser($event)"></app-user>
-</div>
-<hr>
-<div>
-  <p *ngIf="user">{{user.id}}-
-    {{user.name}}-
-    {{user.email}}
-    <button (click)="Login()">Login</button>
-  </p>
+<app-reactive-driven-form></app-reactive-driven-form>
+<app-cars></app-cars>
 
-</div>
 
