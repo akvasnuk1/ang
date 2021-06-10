@@ -1,15 +1,15 @@
 <form [formGroup]="myForm" (ngSubmit)="save()">
   <label>
     model
-    <input type="text" [formControlName]="'model'">
+    <input type="text" [formControl]="modelControl">
   </label>
   <label>
     price
-    <input type="number" [formControlName]="'price'">
+    <input type="number" [formControl]="priceControl">
   </label>
   <label>
     year
-    <input type="number" [formControlName]="'year'">
+    <input type="number" [formControl]="yearControl">
   </label>
   <button>save</button>
   <button (click)="refresh()">refresh</button>

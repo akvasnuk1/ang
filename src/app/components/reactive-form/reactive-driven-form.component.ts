@@ -9,10 +9,13 @@ import {CarsService} from "../../service";
   styleUrls: ['./reactive-driven-form.component.css']
 })
 export class ReactiveDrivenFormComponent {
+  modelControl = new FormControl("");
+  priceControl = new FormControl(0);
+  yearControl = new FormControl(0);
   myForm = new FormGroup({
-    model: new FormControl(""),
-    price: new FormControl(0),
-    year: new FormControl(0),
+    model: this.modelControl,
+    price: this.priceControl,
+    year: this.yearControl
   })
 
   constructor(private carsService: CarsService) {
