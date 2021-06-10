@@ -19,9 +19,9 @@ export class ReactiveDrivenFormComponent {
   }
 
 
-  save(myForm: FormGroup) {
-    this.carsService.pushCars(myForm.value).subscribe(value => {
-      myForm.reset();
+  save() {
+    this.carsService.pushCars(this.myForm.value).subscribe(value => {
+      this.myForm.reset();
     })
   }
 
