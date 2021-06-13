@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div class="main_card">
+    <div class="card_left">
+      <div class="card_datails">
+        <h1>{{movie.title}}</h1>
+        <div class="card_cat">
+          <p class="PG">{{movie.vote_average}}</p>
+          <p class="year">{{movie.release_date}}</p>
+          <p class="genre">{{movieGenre}} </p>
+          <p class="time">{{movie.popularity}}</p>
+        </div>
+        <p class="disc">{{movie.overview}}</p>
+        <a href="" target="_blank">Read More</a>
+        <div class="social-btn">
+          <button>
+            <i class="fas fa-play"></i> SEE TRAILER
+          </button>
+          <button>
+            <i class="fas fa-download"></i> DOWNLOAD
+          </button>
+          <button>
+            <i class="fas fa-thumbs-up"></i> {{movie.original_language}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card_right">
+      <div class="img_container">
+        <a [routerLink]="'details/'+movie.id+''"><img src="https://image.tmdb.org/t/p/w300{{movie.backdrop_path}}"
+                                                      alt=""></a>
+      </div>
+    </div>
+  </div>
+</div>

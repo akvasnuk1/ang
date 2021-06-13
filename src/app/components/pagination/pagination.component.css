@@ -1,33 +1,7 @@
-.left {
-  float: right;
-}
-
-.button--pan {
-  font-family: aktiv-grotesk-extended, sans-serif;
-  font-weight: 700;
-  border: 2px solid #000;
-  border-radius: 3rem;
-  overflow: hidden;
-  color: #000
-}
-
-.button {
-  pointer-events: auto;
-  cursor: pointer;
-  background: #e7e7e7;
-  border: none;
-  padding: 1.1rem 2.6rem;
-  font-family: inherit;
-  font-size: inherit;
-  position: relative;
-  display: inline-block;
-  margin-top: -60px;
-}
-
 ul {
   display: flex;
   justify-content: center;
-
+  margin-bottom: -10px;
 }
 
 ul.pagination {
@@ -59,4 +33,3 @@ ul.pagination li a.active {
 ul.pagination li a:hover:not(.active) {
   background-color: #ddd;
 }
-

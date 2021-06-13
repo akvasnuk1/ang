@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  border-bottom: 1px solid rgba(214, 213, 212, 0.64);
+  width: 100%;
+}
+
+.logo {
+  float: left;
+}
+
+.logo img {
+  display: inline-block;
+}
+
+.nav-icon {
+  float: left;
+  margin: 0.6% 2% 0 8%;
+  width: 4.55%;
+}
+
+.nav-icon a span {
+  width: 48px;
+  height: 34px;
+  display: block;
+  background: url(https://p.w3layouts.com/demos/pinball/web/images/nav-icon.png) no-repeat 0px 0px;
+}
+
+.top-searchbar {
+  float: left;
+  width: 46%;
+  position: relative;
+  margin-left: 2em;
+}
+
+.top-searchbar input[type="text"] {
+  margin-top: 0.55em;
+  width: 100%;
+  padding: 0.58em 1em;
+  border: 1px solid #E7E7E7;
+  transition: border-color 0.3s;
+  outline: none;
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -webkit-appearance: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #777;
+  position: relative;
+}
+
+.top-searchbar input[type="text"] {
+  background: #F7F6F6;
+}
+
+.top-searchbar input[type="text"]:hover {
+  border: 1px solid #DDDDDD;
+}
+
+.top-searchbar input[type="submit"] {
+  position: absolute;
+  background: url(https://p.w3layouts.com/demos/pinball/web/images/search-icon.png) no-repeat;
+  height: 26px;
+  width: 26px;
+  display: inline-block;
+  border: none;
+  top: 12px;
+  right: -22px;
+  outline: none;
+  cursor: pointer;
+}
+
+.top-searchbar {
+  margin-right: 120px;
+}
+
+.user ul li span {
+  vertical-align: middle;
+  margin-left: 0.8em;
+  font-size: 1em;
+  margin-bottom: 80px;
+}
+
+
+
