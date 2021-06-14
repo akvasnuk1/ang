@@ -12,7 +12,8 @@ export class CustomInterceptorService implements HttpInterceptor {
     let pagination, rating;
     if (req.url.includes("https://api.themoviedb.org/3/movie/top_rated&page=")) {
       let url = req.url.split("")
-      let num = url[url.length - 1]
+      let num = url.splice(50).join("")
+      console.log(num);
       pagination = req.clone({
         url: "https://api.themoviedb.org/3/movie/top_rated",
         params: req.params.set('api_key', 'dbeb8a7c94c70b10030a2bea613ec0df').set('page', num)
