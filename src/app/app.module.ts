@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 
 
 import {RouterModule, Routes} from "@angular/router";
@@ -14,7 +14,8 @@ import {
   MoviesListComponent, PaginationComponent, PaginationMovieListComponent,
   PaginationMoviesListComponent
 } from "./components";
-import {MovieDetailsResolveService, PaginationResolveService} from "./service";
+import {CustomInterceptorService, MovieDetailsResolveService, PaginationResolveService} from "./service";
+
 
 
 const routes: Routes = [
@@ -41,7 +42,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:CustomInterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

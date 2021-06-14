@@ -7,13 +7,13 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class PaginationResolveService implements Resolve<Observable<Object>> {
-  private url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=dbeb8a7c94c70b10030a2bea613ec0df&language=en-US&page='
+  private url = 'https://api.themoviedb.org/3/movie/top_rated'
 
   constructor(private httpClient: HttpClient) {
   }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Observable<Object>> | Promise<Observable<Object>> | Observable<Object> {
-    return this.httpClient.get<Object>(this.url + route.params.page)
+    return this.httpClient.get<Object>(this.url + "&page="+route.params.page)
   }
 
 

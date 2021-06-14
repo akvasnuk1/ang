@@ -11,6 +11,6 @@ export class MovieDetailsResolveService implements Resolve<Observable<Object>> {
   }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Observable<Object>> | Promise<Observable<Object>> | Observable<Object> {
-    return this.httpClient.get('https://api.themoviedb.org/3/movie/' + route.params.id + "?api_key=dbeb8a7c94c70b10030a2bea613ec0df&language=en-US");
+    return this.httpClient.get('https://api.themoviedb.org/3/movie/' + route.params.id);
   }
 }
