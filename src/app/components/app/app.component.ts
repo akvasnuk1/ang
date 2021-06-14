@@ -14,7 +14,6 @@ export class AppComponent {
   darkMode() {
     const element = document.body;
     element.classList.toggle("dark-mode")
-    return "dark-mode"
   }
 
   check() {
