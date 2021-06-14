@@ -21,10 +21,14 @@
         Release Date:{{movieDetails.release_date}}<br>
         Runtime:{{movieDetails.runtime}}<br>
         Vote Average:{{movieDetails.vote_average}}<br>
+        <div class="center" *ngIf="ratingSuccess">Success:{{ratingSuccess.success}}<br>
+          Status Code:{{ratingSuccess.status_code}}<br>
+          Status Message:{{ratingSuccess.status_message}}</div>
       </div>
       <span class="text">Genres:</span><br>
       <span class="text" *ngFor="let genre of genres">{{genre.name}}</span>
       <br>
     </div>
   </div>
+
 </div>

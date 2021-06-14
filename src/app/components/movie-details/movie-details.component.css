@@ -27,6 +27,8 @@
 
 .center-text {
   font-size: 20px;
+  display: flex;
+  gap: 500px
 }
 
 .rate {
@@ -70,6 +72,8 @@
 .rate > label:hover ~ input:checked ~ label {
   color: #c59b08;
 }
-.fz{
+
+.fz {
   font-family: 'Quicksand', sans-serif;
 }
+
