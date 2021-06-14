@@ -15,6 +15,7 @@
   color: #fcedd8;
   font-family: 'Niconne', cursive;
   font-weight: 700;
+  margin-left: 25px;
   text-shadow: 5px 5px 0px #eb452b
 }
 
@@ -68,4 +69,7 @@
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
   color: #c59b08;
+}
+.fz{
+  font-family: 'Quicksand', sans-serif;
 }

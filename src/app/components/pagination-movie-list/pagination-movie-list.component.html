@@ -6,7 +6,7 @@
         <div class="card_cat">
           <p class="PG">{{movie.vote_average}}</p>
           <p class="year">{{movie.release_date}}</p>
-          <p class="genre">{{movieGenre}} </p>
+          <p class="genre" *ngFor="let genre of movieGenre">{{genre.name}} </p>
           <p class="time">{{movie.popularity}}</p>
         </div>
         <p class="disc">{{movie.overview}}</p>
@@ -19,7 +19,7 @@
             <i class="fas fa-download"></i> DOWNLOAD
           </button>
           <button>
-            <i class="fas fa-thumbs-up"></i>{{movie.original_language}}
+            <i class="fas fa-thumbs-up"></i>{{movie.original_language.toUpperCase()}}
           </button>
         </div>
       </div>

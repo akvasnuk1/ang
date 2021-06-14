@@ -1,11 +1,11 @@
-<div>
+<div class="fz">
   <h1 class="center">{{movieDetails.original_title}}</h1>
   <div class="flex">
     <img src="https://image.tmdb.org/t/p/w300{{movieDetails.poster_path}}" alt="">
     <div>
       <h3>{{movieDetails.overview}}</h3>
       <img class="img" src="https://image.tmdb.org/t/p/w300{{movieDetails.backdrop_path}}" alt=""><br>
-      <form #form class="rate" (click)="checkStar($event)">
+      <form class="rate" (click)="checkStar($event)">
         <input type="radio" id="star5" name="rate" value="5"/>
         <label for="star5" title="text">5 stars</label>
         <input type="radio" id="star4" name="rate" value="4"/>
@@ -22,10 +22,9 @@
         Runtime:{{movieDetails.runtime}}<br>
         Vote Average:{{movieDetails.vote_average}}<br>
       </div>
-      <span class="text">Genres:</span><br><span class="text">{{genre1}}</span><br>
-      <span class="text">{{genre2}}</span>
-
+      <span class="text">Genres:</span><br>
+      <span class="text" *ngFor="let genre of genres">{{genre.name}}</span>
+      <br>
     </div>
   </div>
-
 </div>

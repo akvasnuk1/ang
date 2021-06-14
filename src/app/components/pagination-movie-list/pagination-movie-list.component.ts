@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {GenresService} from "../../service";
-import {Movie} from "../../interface";
+import {Genre, Movie} from "../../interface";
 
 
 @Component({
@@ -11,14 +11,14 @@ import {Movie} from "../../interface";
 export class PaginationMovieListComponent implements OnInit {
   @Input()
   movie: Movie
-  movieGenre: any[]
+  movieGenre: Genre[]
 
   constructor(private genresService: GenresService) {
   }
 
   ngOnInit(): void {
     this.genresService.getGenre(this.movie.genre_ids).subscribe((value: any) => {
-      value.forEach((value: any) => this.movieGenre = value.name)
+      this.movieGenre=value.slice(0,3)
     })
   }
 

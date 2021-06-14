@@ -11,11 +11,11 @@ export class PaginationComponent {
 
 
   inc() {
-    this.x === 500 ? this.x = 1 : this.x++
+    this.x === 500 ? this.x = 1 : this.x=this.x+1
   }
 
   dec() {
-    this.x === 1 ? this.x = 500 : --this.x
+    this.x === 1 ? this.x = 500 : this.x=this.x-1
   }
 
   state() {

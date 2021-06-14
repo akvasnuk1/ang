@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {MoviesRatingService} from "../../service";
-import {MovieDetails} from "../../interface";
+import {Genre, MovieDetails} from "../../interface";
 
 
 @Component({
@@ -11,8 +11,7 @@ import {MovieDetails} from "../../interface";
 })
 export class MovieDetailsComponent implements OnInit {
   movieDetails: MovieDetails
-  genre1: string
-  genre2: string
+  genres: Genre[]
 
   constructor(private activatedRoute: ActivatedRoute, private moviesRatingService: MoviesRatingService) {
   }
@@ -20,8 +19,7 @@ export class MovieDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(value => {
       this.movieDetails = value.data
-      this.genre1 = value.data.genres[0].name
-      this.genre2 = value.data.genres[1].name
+      this.genres = value.data.genres
     })
 
   }
